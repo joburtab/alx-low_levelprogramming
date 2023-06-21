@@ -1,26 +1,31 @@
 #include "main.h"
 
 /**
- * 100-times_table - function that prints the n times table, starting with 0
- * @c: The character to be checked.
+ * times_table - function that prints the n times table, starting with 0
+ * @n: The number up to which the times table should be printed.
  *
- * Return: 1 if character is lowercase, 0 otherwise.
+ * Return: void
  */
+void times_table(int n) {
+    int number, by, result, row, column;
 
-void times_table(int n){
-	int number = 0;
-	int by = 0;
-	int result, count;
-	for(count = 0;count < n; count++){
-	
-	   for(count = 0; count < 10; count++){
-	      result = number * by;
-	      by++;
-	      _putchar(result);
-	   }
-	number++;
-	_putchar('\n');
-	}
+    for (row = 0; row <= n; row++) {
+        for (column = 0; column <= 10; column++) {
+            result = row * column;
+            _putchar(result + '0');  // Assuming _putchar() is defined properly
+            _putchar(' ');
+        }
+        _putchar('\n');
+    }
 }
-
-
+int main(void) {
+    print_times_table(3);
+    printf("\n");
+    print_times_table(5);
+    printf("\n");
+    print_times_table(98);
+    printf("\n");
+    print_times_table(12);
+  
+    return 0;
+}
