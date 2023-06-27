@@ -9,18 +9,22 @@ int main(void)
 {
     srand(time(0));
 
-    char password[7];
+    char password[8]; // Increase array size to accommodate null terminator
     int i;
+
+    // Declare variables at the beginning of the block
+    // ...
 
     for (i = 0; i < 7; i++)
     {
-        password[i] = rand() % 94 + 33; 
+        password[i] = rand() % 94 + 33;
     }
 
-    password[i] = '\0'; 
+    password[i] = '\0';
 
     printf("%s", password);
 
     return 0;
 }
+
 
