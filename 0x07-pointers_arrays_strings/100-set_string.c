@@ -1,8 +1,3 @@
-/*
- * File: 100-set_string.c
- * Auth: Nate
- */
-
 #include "main.h"
 
 /**
